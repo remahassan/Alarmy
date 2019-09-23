@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alarmy</title>
+<style>
+    #clock-wrapper{
+      font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+    font-size:100px;
+    color:#fff;
+    text-align:center;
+    margin-top:20px;
+}
+body{
+background:url("http://themes.fastwp.net/wisten/wp-content/uploads/2014/04/12.jpg") center center no-repeat fixed;
+
+}
+html,body
+{
+  width: 800px;
+height: 500px;
+}
+.txtoftime, .when-alrm-ring{
+      font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+    color:#efefef;
+    font-size:40px;
+    text-align:center;
+}
+#valid
+{
+font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+    color:#efefef;
+    font-size:20px;
+    text-align:center;
+}
+.getalarmtime{
+    border:none;
+    background:transparent;
+    outline:none;
+      font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+    font-size:30px;
+    color:#eee;
+    border-bottom:1px solid #eee;
+    width:100px;
+    margin-top:20px;
+    text-align:center;
+}
+.btntosetalrm{
+    background: #00000078;
+      font-family: 'Roboto';
+  font-style: normal;
+
+    color:#fff;
+    border:3px solid #fff;
+    
+    width:160px;
+    text-align:center;
+    margin:0 auto;
+    margin-top:20px;
+    cursor:pointer;
+}
+.btntosetalrm:hover{
+    color:#000;
+    background:#fff;
+}
+.when-alrm-ring{
+    display:none;
+}
+.picker
+{
+    font-weight: 600;
+    outline: 0;
+    margin-top: 10px;
+    font-size: larger;
+    padding: 20px;
+    border-radius: 15px;
+}
+.setbtn
+{
+    font-weight: 500;
+    outline: 0;
+    margin-top: 10px;
+    font-size: larger;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 15px; 
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+
+<body>
+  <section class="main">
+    <div id="clock-wrapper"></div>
+    <audio id="myAudio" loop>
+      <source src="alarmy.mp3" type="audio/mpeg">
+    </audio>
+       <div class="alrm-main"> <div class="txtoftime">Set Alarm Time</div>
+       <div>
+        <div class="alrm-main" style="text-align: center;" > 
+            <input class="picker" type="datetime-local" id="pickertime" name="bdaytime">
+       
+            <span>
+               <button class="btntosetalrm setbtn" id="btn" >Set Alarm</button>
+    
+            </span>
+        </div>
+      
+           </div>
+       </div>
+       
+           
+      
+        <div class="when-alrm-ring">The alarm will ring at <span class="aumkar"></span></div>
+        <br/>
+  </section>
+ 
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900' rel='stylesheet' type='text/css'>
+   
+  
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+    <script src="background.js"></script>
+
+</body>
+</html>
